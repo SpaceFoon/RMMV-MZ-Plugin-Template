@@ -1,95 +1,114 @@
+//=============================================================================
+// Plugin: YourPluginName
+// Author: YourName (Handle)
+// Version: 1.0.0
+//=============================================================================
+
 /*:
  * @target MV MZ
- * @plugindesc v1.0.0 [Short one-line description]
- * @author [Your Name]
- * @url [https://your-site-or-repo.example]
- *
+ * @plugindesc v1.0.0 Short one-line summary for the Plugin Manager.
+ * @author YourName
+ * @url https://example.com/your-plugin-homepage
  * @help
  * ============================================================================
- *  [Plugin Name]
+ *  YourPluginName v1.0.0
  * ============================================================================
- *  Description:
- *  - Brief overview of what this plugin does.
+ *  Overview:
+ *    - What this plugin changes/adds.
  *
- * ----------------------------------------------------------------------------
- *  Installation
- * ----------------------------------------------------------------------------
- *  1. Save this file as [PluginName].js in your project's js/plugins folder.
- *  2. Open the Plugin Manager and add [Plugin Name] to your project.
- *  3. Place it above/below other plugins as noted in Compatibility.
- *
- * ----------------------------------------------------------------------------
- *  Usage
- * ----------------------------------------------------------------------------
- *  - Explain the basic setup.
- *  - Show 1–2 concrete examples of how to use it.
- *
- *  Plugin Commands (MV):
- *  - List any MV-style plugin command text here (if applicable).
- *
- *  Plugin Commands (MZ):
- *  - See the MZ Plugin Commands section below for details.
- *
- *  Script Calls:
- *  - MyPlugin.doSomething(args);
+ *  Usage:
+ *    - How to turn it on / configure it.
+ *    - Where to find settings in the database.
  *
  *  Notetags:
- *  - <MyPlugin: value>
- *    Explain what this does and valid values.
+ *    <YourTag: x>
+ *      - Explain what it does.
  *
- * ----------------------------------------------------------------------------
- *  Compatibility
- * ----------------------------------------------------------------------------
- *  - Engine: MV [version], MZ [version].
- *  - Known compatible plugins: ...
- *  - Known conflicts: ...
- *  - Load order notes: Place above/below X/Y/Z.
+ *  Script Calls:
+ *    YourPlugin.doThing(args);
+ *      - Explain args.
  *
- * ----------------------------------------------------------------------------
- *  Terms of Use
- * ----------------------------------------------------------------------------
- *  - Free for commercial use? [Yes/No]
- *  - Credit required? [Yes/No, how]
- *  - Redistribution / modification rules.
+ *  Plugin Commands (MZ):
+ *    See the Plugin Command list in this header.
  *
- * ----------------------------------------------------------------------------
- *  Changelog
- * ----------------------------------------------------------------------------
- *  v1.0.0 - [YYYY-MM-DD]
- *  - Initial release.
+ *  Compatibility:
+ *    - Tested with RPG Maker MV 1.x / MZ 1.x.
+ *    - Load order notes, if any.
  *
- * ============================================================================
- *  End of Help
+ *  Terms of Use:
+ *    - Free for commercial and non-commercial use.
+ *    - Credit: "YourName".
+ *
+ *  Changelog:
+ *    v1.0.0 - Initial release.
  * ============================================================================
  *
- * @param ExampleParam
- * @text Example Parameter
+ * // Dependency hints (fill in or delete if not used)
+ * // @base YourCorePlugin
+ * // @orderAfter Some_Other_Plugin
+ * // @orderBefore Another_Plugin
+ *
+ * // Prevent deploy from stripping assets used only via code:
+ * // @requiredAssets img/pictures/example_1
+ * // @requiredAssets img/system/example_2
+ *
+ * @param ExampleNumber
+ * @text Example Number
+ * @desc Example numeric parameter.
  * @type number
  * @min 0
- * @default 1
- * @desc Short description of what this parameter controls.
+ * @default 10
  *
- * ----------------------------------------------------------------------------
- *  MZ Plugin Commands
- * ----------------------------------------------------------------------------
+ * @param ExampleToggle
+ * @text Example Toggle
+ * @desc Example boolean parameter.
+ * @type boolean
+ * @on Enabled
+ * @off Disabled
+ * @default true
+ *
+ * @param ExampleStructList
+ * @text Example Struct List
+ * @desc Example list of structured entries.
+ * @type struct<ExampleStruct>[]
+ * @default []
  *
  * @command ExampleCommand
  * @text Example Command
- * @desc Short description of what this command does.
+ * @desc Example plugin command that does something.
  *
  * @arg ExampleArg
- * @text Example Argument
- * @type string
- * @default
- * @desc Describe what this argument controls.
+ * @text Example Arg
+ * @desc Example command argument.
+ * @type number
+ * @default 0
  */
 
- //=============================================================================
- //  [Plugin Name]
- //  by [Your Name]
- //=============================================================================
- //
- //  Dev Notes / TODO:
- //  - [ ] ...
- //
- //=============================================================================
+/*~struct~ExampleStruct:
+ * @param Id
+ * @text ID
+ * @desc Identifier.
+ * @type number
+ * @default 1
+ *
+ * @param Name
+ * @text Name
+ * @desc Display name.
+ * @type string
+ * @default ""
+ */
+
+/*:ja
+ * @target MZ
+ * @plugindesc v1.0.0 日本語での概要（必要なら）
+ * @author YourName
+ * @url https://example.com/your-plugin-homepage
+ * @help
+ * ここに日本語ヘルプ。必要なければ、このブロックごと削除。
+ */
+ 
+/*
+ * License:
+ *   (MIT / custom terms here – keep the full license text
+ *   in this separate block, not inside the @help section.)
+ */
